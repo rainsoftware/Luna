@@ -1,4 +1,6 @@
 {
+    "name": "rain-software/rain",
+    "description": "An open-source cowboy inspired PHP web server.",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -55,8 +57,8 @@
             "@auto-scripts"
         ],
         "luna": [ 
-       "php -S localhost:8000 -t public/www" 
-    ]
+            "php -S localhost:8000 -t public/www" 
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
