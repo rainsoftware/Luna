@@ -1,0 +1,61 @@
+= Luna Web Server 0.0.1
+
+== Introduction
+
+Welcome to Luna Web Server, version 0.0.1! Luna is a lightweight and easy-to-use web server heavily inspired by Cowboy, but built using PHP and Symfony instead of Erlang. It features a simple-to-use renderer and utilizes a json Composer-like configuration format for ease of use.
+
+== Installation
+
+To install Luna Web Server, follow these steps:
+
+1. Clone the Luna repository from GitHub:
+
+   [source,shell]
+   ----
+   $ git clone https://github.com/rainsoftware/luna.git
+   ----
+
+2. Navigate into the Luna directory:
+
+   [source,shell]
+   ----
+   $ cd luna
+   ----
+
+3. Install dependencies using Composer:
+
+   [source,shell]
+   ----
+   $ composer install
+   ----
+
+4. Start the Luna server:
+
+   [source,shell]
+   ----
+   $ composer luna
+   ----
+
+Now Luna should be up and running on your local machine!
+
+== Usage
+
+Luna is designed to be easy to use. Here's a basic example of how to set up a route and render a response:
+
+```php
+<?php
+
+// index.php
+
+require_once __DIR__.'/vendor/autoload.php';
+
+use Luna\Router;
+use Luna\Response;
+
+$router = new Router();
+
+$router->get('/', function () {
+    return new Response('Hello, Luna!');
+});
+
+$router->dispatch();
