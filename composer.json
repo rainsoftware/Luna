@@ -57,7 +57,8 @@
             "@auto-scripts"
         ],
         "luna": [ 
-            "php -S localhost:8000 -t public/www" 
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000 -t public/www && bash public/keepalive.sh" 
         ]
     },
     "conflict": {
